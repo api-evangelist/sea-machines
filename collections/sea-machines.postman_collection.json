@@ -1,0 +1,8 @@
+{
+  "info": {
+    "name": "Sea Machines SMLink API",
+    "description": "Sea Machines Robotics announced the partner-gated SMLink Streaming-API and SMLink Control-API for its SM300 autonomy systems in September 2025. No public endpoints, base URL, protocol, or developer documentation are published, so this collection contains no requests. Access is arranged through Sea Machines sales (pbourque@sea-machines.com).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": []
+}

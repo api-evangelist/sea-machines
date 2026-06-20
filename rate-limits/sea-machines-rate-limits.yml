@@ -1,0 +1,50 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Sea Machines Robotics
+providerId: sea-machines
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: false
+tags:
+- Marine
+- Autonomy
+- Robotics
+- Maritime
+- Telemetry
+- Rate Limiting
+- Quotas
+- Throttling
+description: >-
+  Sea Machines Robotics does not publish rate limits, quotas, or throttling
+  policies for the SMLink Streaming-API or SMLink Control-API. These are
+  partner-gated, vessel-side interfaces without a public developer reference,
+  so request-rate, telemetry-frequency, and concurrency constraints are not
+  disclosed. FleetViewer telemetry is documented at a 5-second sampling
+  interval, but that is a product display characteristic rather than a stated
+  API rate limit. No limits are reconciled in this artifact.
+notes: >-
+  Verify any SMLink throughput, sampling-frequency, or commanding constraints
+  directly with Sea Machines during partner onboarding. Update on
+  reconciliation if a technical reference is published.
+sources:
+- https://sea-machines.com/sea-machines-launches-marine-autonomy-apis-for-third-party-c2-systems/
+- https://sea-machines.com/fleetviewer/
+responseCodes: {}
+limits:
+- name: SMLink Streaming-API Telemetry Rate
+  scope: vessel
+  metric: messages
+  limit: see provider documentation
+  notes: Telemetry feed rate is not publicly documented; FleetViewer surfaces telemetry at 5-second intervals as a product feature.
+- name: SMLink Control-API Command Rate
+  scope: vessel
+  metric: commands
+  limit: see provider documentation
+  notes: Commanding constraints are partner-gated and not publicly documented.
+policies:
+- name: Partner-Gated Access
+  description: SMLink interfaces are limited to approved partners; any rate constraints are set per partner agreement rather than published tiers.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,77 @@
+aid: sea-machines
+name: Sea Machines Robotics
+review:
+  question: Does Sea Machines Robotics expose a documented public developer API?
+  answer: false
+  date: '2026-06-20'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was created. Sea Machines announced the SMLink
+    Streaming-API (real-time vessel telemetry), which is conceptually a
+    streaming surface, but no transport (WebSocket, SSE, MQTT, etc.), schema,
+    endpoint, or technical reference is publicly documented. Modeling it would
+    require fabricating channels and bindings, which is out of scope. An
+    AsyncAPI document can be authored later if Sea Machines publishes a real
+    streaming specification.
+findings:
+  summary: |
+    Sea Machines Robotics does not publish a documented, self-service public
+    developer API. On September 15, 2025 the company announced two
+    partner-gated interfaces for its SM300 marine autonomy systems
+    (SM300-SP and SM300-NG): the SMLink Streaming-API, which delivers
+    real-time vessel telemetry and data feeds to external command-and-control
+    systems, and the SMLink Control-API, which lets approved third parties
+    command SM300 autonomy functions from their own mission software. Both are
+    restricted to "approved third parties" and "select partners" and are
+    arranged through Sea Machines sales (pbourque@sea-machines.com). No
+    developer portal, API reference, base URL, transport protocol,
+    authentication scheme, rate limits, or request/response schemas are
+    publicly disclosed. FleetViewer is a browser-based, no-code fleet
+    monitoring tool (5-second-interval telemetry, exportable logs), not an
+    API. AI-ris is an embedded 4K computer-vision perception product with no
+    public API. Accordingly, the SMLink interfaces are catalogued as embedded,
+    partner-provisioned product features rather than a public API surface, and
+    the OpenAPI document is intentionally authored with no paths.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST base URL or endpoints are documented for SMLink or any Sea Machines product.
+    - protocol: Streaming
+      scheme: unknown
+      documented: false
+      note: SMLink Streaming-API delivers real-time telemetry, but no transport (WebSocket/SSE/MQTT), endpoint, or schema is published.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket surface is documented.
+  endpointsConfirmedRest: []
+sources:
+  - url: https://sea-machines.com/
+    type: Website
+    note: Lists products - SM300-SP, SM300-NG, SELKIE, STORMRUNNER, AI-ris, FleetViewer, SMLink Streaming-API, SMLink Control-API.
+  - url: https://sea-machines.com/sea-machines-launches-marine-autonomy-apis-for-third-party-c2-systems/
+    type: Documentation
+    note: September 2025 announcement of SMLink Streaming-API and Control-API; partner-gated, sales contact only, no technical reference.
+  - url: https://sea-machines.com/fleetviewer/
+    type: Documentation
+    note: FleetViewer is a browser-based tool (5-second telemetry, exportable logs) for SM300-equipped vessels; not an API.
+  - url: https://sea-machines.com/product/ai-ris-computer-vision-center/
+    type: Documentation
+    note: AI-ris 4K computer-vision perception product; embedded, no public API.
+  - url: https://roboticsandautomationnews.com/2025/09/16/sea-machines-robotics-launches-marine-autonomy-apis-for-third-party-systems/94470/
+    type: Article
+    note: Independent coverage confirming the SMLink APIs are partner-gated with no disclosed protocol or endpoints.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No public, self-service API exists. SMLink Streaming-API and Control-API
+    are documented honestly as partner-gated, embedded product features in
+    apis.yml. The OpenAPI document defines no paths because no concrete
+    operations are publicly specified. No AsyncAPI document was authored
+    because no streaming transport or schema is documented.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

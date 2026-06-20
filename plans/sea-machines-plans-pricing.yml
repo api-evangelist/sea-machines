@@ -1,0 +1,60 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Sea Machines Robotics
+providerId: sea-machines
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: false
+tags:
+- Marine
+- Autonomy
+- Robotics
+- Maritime
+- Computer Vision
+- Telemetry
+- Plans
+description: >-
+  Sea Machines Robotics does not publish public pricing for its products or
+  for the SMLink Streaming-API and SMLink Control-API. The autonomy systems
+  (SM300-SP, SM300-NG), AI-ris perception, and FleetViewer are sold as
+  hardware-plus-software solutions, and SMLink API access is partner-gated.
+  Pricing, packaging, and any per-vessel or per-seat terms are negotiated
+  directly through Sea Machines sales rather than offered as self-service
+  tiers. No plan entries are reconciled in this artifact.
+notes: >-
+  Contact Sea Machines sales (pbourque@sea-machines.com) for commercial and
+  partner-integration terms. Update this artifact on reconciliation if Sea
+  Machines publishes packaged plans or API pricing.
+sources:
+- https://sea-machines.com/
+- https://sea-machines.com/sea-machines-launches-marine-autonomy-apis-for-third-party-c2-systems/
+- https://sea-machines.com/fleetviewer/
+plans:
+- id: sea-machines-contact-sales
+  name: Contact Sales
+  type: enterprise
+  description: >-
+    All Sea Machines products and SMLink API access are sold and provisioned
+    through direct sales and partner agreements; no public self-service tiers
+    or published pricing exist.
+  entries:
+  - label: Custom Agreement
+    name: custom
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+  elements:
+  - name: SM300-SP / SM300-NG Autonomy Systems
+  - name: AI-ris Computer Vision
+  - name: FleetViewer
+  - name: SMLink Streaming-API (partner-gated)
+  - name: SMLink Control-API (partner-gated)
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

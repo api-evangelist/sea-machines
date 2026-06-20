@@ -1,0 +1,93 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Sea Machines Robotics
+providerId: sea-machines
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: false
+tags:
+- Marine
+- Autonomy
+- Robotics
+- Maritime
+- Telemetry
+- FinOps
+- Cost Management
+- FOCUS
+description: >-
+  FinOps view of Sea Machines Robotics spend. Sea Machines sells embedded
+  autonomy systems (SM300-SP, SM300-NG), AI-ris computer vision, and the
+  FleetViewer platform as hardware-plus-software solutions, with SMLink
+  Streaming-API and SMLink Control-API access provisioned to approved
+  partners. There is no public usage-based pricing or billing meter for the
+  APIs; cost is driven by negotiated per-vessel or per-program agreements
+  rather than metered API consumption. Meters below are placeholders and are
+  not reconciled against any published billing model.
+notes: >-
+  No public pricing or billing exports exist. Treat costs as capital and
+  contract spend per vessel/program; reconcile against the actual Sea Machines
+  agreement during onboarding.
+sources:
+- https://sea-machines.com/
+- https://sea-machines.com/sea-machines-launches-marine-autonomy-apis-for-third-party-c2-systems/
+- https://sea-machines.com/fleetviewer/
+- https://focus.finops.org/focus-specification/v1-3/
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Sea Machines Robotics
+serviceCategory: Marine Autonomy and Robotics
+billingModel:
+  pricingCategory: Contract-Based
+  billingFrequency: Negotiated
+  billingCurrency: USD
+  chargeCategories:
+  - Purchase
+  - Usage
+focusColumns:
+  ServiceName: SMLink / SM300
+  ServiceCategory: Marine Autonomy and Robotics
+  ProviderName: Sea Machines Robotics
+  PublisherName: Sea Machines Robotics
+  InvoiceIssuerName: Sea Machines Robotics
+  BillingCurrency: USD
+  ChargeCategory: Purchase
+  PricingCategory: Contract-Based
+meters:
+- name: autonomy_systems
+  description: SM300-SP / SM300-NG autonomy systems provisioned per vessel (placeholder; not publicly priced).
+  unit: vessels
+  aggregation: sum
+  dimensions:
+  - account
+  - vessel
+- name: smlink_telemetry
+  description: SMLink Streaming-API telemetry feeds consumed by external systems (placeholder; not publicly metered).
+  unit: feeds
+  aggregation: sum
+  dimensions:
+  - account
+  - vessel
+- name: smlink_commands
+  description: SMLink Control-API commanding integration usage (placeholder; not publicly metered).
+  unit: integrations
+  aggregation: sum
+  dimensions:
+  - account
+  - vessel
+principles:
+- name: Visibility
+  description: Track per-vessel and per-program agreements; there is no self-service API usage export to pull.
+- name: Allocation
+  description: Map autonomy systems, AI-ris units, and SMLink integrations to the vessels/programs they serve.
+- name: Optimization
+  description: Negotiate fleet-level terms; use FleetViewer (no-code) where programmatic SMLink integration is not required.
+- name: Accountability
+  description: Assign program owners and review contract spend against vessel deployment plans.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
