@@ -115,6 +115,8 @@ apis:
     playback, and exportable logs. FleetViewer is a no-code ready-to-use tool, not
     an API; the SMLink APIs cover programmatic integration.
 common:
+- type: DomainSecurity
+  url: security/sea-machines-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/sea-machines
 - type: Website
@@ -127,6 +129,8 @@ common:
   url: rate-limits/sea-machines-rate-limits.yml
 - type: FinOps
   url: finops/sea-machines-finops.yml
+- url: https://sea-machines.com/category/blog/
+  type: Blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
