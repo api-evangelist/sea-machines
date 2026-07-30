@@ -10,7 +10,19 @@ description: Sea Machines Robotics builds autonomous command-and-control systems
   autonomy functions from their own mission software. These interfaces are
   embedded, vessel-side product features, not a self-service public developer
   platform; access is arranged through Sea Machines sales.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: enterprise
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sea-machines.png
 tags:
 - Marine
 - Autonomy
