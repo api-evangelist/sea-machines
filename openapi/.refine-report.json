@@ -1,0 +1,14 @@
+{
+  "provider": "sea-machines",
+  "sources": [
+    "sea-machines-openapi.yml"
+  ],
+  "outputs": [],
+  "archived": [
+    "archived sea-machines-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
