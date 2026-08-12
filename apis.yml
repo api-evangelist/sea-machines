@@ -45,7 +45,7 @@ apis:
   properties:
   - url: https://sea-machines.com/sea-machines-launches-marine-autonomy-apis-for-third-party-c2-systems/
     type: Documentation
-  - url: openapi/sea-machines-openapi.yml
+  - url: openapi/_original/sea-machines-openapi.yml
     type: OpenAPI
   description: Partner-gated interface announced September 2025 that delivers
     real-time SM300 vessel telemetry and data feeds (position, heading, mechanical
@@ -65,7 +65,7 @@ apis:
   properties:
   - url: https://sea-machines.com/sea-machines-launches-marine-autonomy-apis-for-third-party-c2-systems/
     type: Documentation
-  - url: openapi/sea-machines-openapi.yml
+  - url: openapi/_original/sea-machines-openapi.yml
     type: OpenAPI
   description: Partner-gated interface announced September 2025 that grants select
     partners the ability to command SM300 autonomy functions directly from
