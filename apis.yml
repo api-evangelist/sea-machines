@@ -28,6 +28,13 @@ tags:
 - Autonomy
 - Robotics
 - Maritime
+- Computer-Vision
+- Telemetry
+tags_raw:
+- Marine
+- Autonomy
+- Robotics
+- Maritime
 - Computer Vision
 - Telemetry
 created: '2026-06-20'
@@ -96,6 +103,10 @@ apis:
 - aid: sea-machines:ai-ris-perception
   name: AI-ris Computer Vision
   tags:
+  - Computer-Vision
+  - Perception
+  - Situational Awareness
+  tags_raw:
   - Computer Vision
   - Perception
   - Situational Awareness
