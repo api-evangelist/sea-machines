@@ -137,6 +137,10 @@ apis:
   tags:
   - Fleet Monitoring
   - Telemetry
+  - Dashboards
+  tags_raw:
+  - Fleet Monitoring
+  - Telemetry
   - Dashboard
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://sea-machines.com/fleetviewer/
